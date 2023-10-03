@@ -4,6 +4,8 @@
  */
 package exercici18_uds2;
 
+import java.util.Scanner;
+
 /**
  *
  * @author gipe3503
@@ -14,15 +16,25 @@ public class Exercici18_uds2 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        double horat,tarifan;
+        Scanner sc = new Scanner (System.in);
+        double t_normal,h_normal,horas,salario_extra,salario,salario_normal,h_extra;
         System.out.println("Quantes hores has treballat?");
-        horat = 35;
-        tarifan= 20;
-        horat=sc.nextDouble();
+        t_normal = 20;
+        h_normal= 35;
+        salario_extra=1.5;
+        horas=sc.nextDouble();
         
-        if (>=35) {
-            hora extra= 35 - 
+        if (horas>h_normal) {
+            h_extra = horas - h_normal;
+            salario_extra = h_extra*t_normal*salario_extra;
+            salario_normal = h_normal * t_normal;
+            salario = salario_extra + salario_normal;
+            System.out.println("El teu salari es " + salario);
             
+        }
+        else {
+            salario = horas*t_normal;
+            System.out.println("El teu salari es " + salario);
         }
     }
     
